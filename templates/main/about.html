@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+{%block title %} About {%endblock%}
+
+{%block employeeList%}
+  <div class="container">
+    <h1>Employee List</h1>
+    <div class="employees">
+      {% for employee in employees %}
+        <div class="employee">
+          <h2><a href="#">{{employee.Employee_Name}}</a></h2>
+          <p>{{employee.Employee_Role}}</p>
+          <p>{{employee.date}}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{%endblock%}

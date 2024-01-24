@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+{%block title %} Contact {%endblock%}
+
+{%block employeeList%}
+  <div class="container">
+    <h1>Web Pages</h1>
+    <div class="webpages">
+      {% for webpage in webpages %}
+        <div class="webpage">
+          <h2><a href="#">{{webpage.name}}</a></h2>
+          <p>{{webpage.url}}</p>
+          <!-- <p>{{employee.date}}</p> -->
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{%endblock%}
